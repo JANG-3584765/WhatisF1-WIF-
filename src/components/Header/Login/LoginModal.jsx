@@ -1,8 +1,13 @@
+import "./LoginModal.css";
+
 function LoginModal({ closeLogin }) {
   return (
-    <div className="login-modal">
+    <div className="login-modal" onClick={closeLogin}>
 
-      <div className="modal-content">
+      <div 
+        className="modal-content"
+        onClick={(e) => e.stopPropagation()}
+      >
 
         <div className="modal-header">
           <h2>Login</h2>
@@ -14,13 +19,16 @@ function LoginModal({ closeLogin }) {
 
         <input type="email" placeholder="Email" />
         <input type="password" placeholder="Password" />
+
         <button>Login</button>
+
         <hr />
 
         <button>Login with Google</button>
         <button>Login with Kakao</button>
 
       </div>
+
     </div>
   );
 }
