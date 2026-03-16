@@ -10,22 +10,35 @@ function LoginModal({ closeLogin }) {
       >
 
         <div className="modal-header">
-          <h2>Login</h2>
+          <h2>로그인</h2>
 
           <button onClick={closeLogin}>
             X
           </button>
         </div>
 
+        <div className="login-form">
+
         <input type="email" placeholder="Email" />
         <input type="password" placeholder="Password" />
 
-        <button>Login</button>
+        <button className="login-button">
+          로그인
+        </button>
+
+        </div>
 
         <hr />
 
-        <button>Login with Google</button>
-        <button>Login with Kakao</button>
+        <div className="social-login">
+          <button className="google-login">
+          Google로 계속하기
+          </button>
+
+          <button className="kakao-login">
+          Kakao로 계속하기
+          </button>
+        </div>
 
       </div>
 
